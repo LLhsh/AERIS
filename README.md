@@ -1,6 +1,5 @@
 # AERIS
 
-A Python desktop application for aerospace engine document parsing, technical parameter extraction, and hierarchical requirements organization using a locally hosted language model.
 
 ## Features
 
@@ -34,13 +33,3 @@ The source imports PySide2, requests, PyPDF2, python-docx, pandas, Pillow and py
 Configure the actual model endpoint and model name in the desktop settings. For a direct Ollama native chat connection, use `/api/chat`; the OpenAI-compatible chat path is `/v1/chat/completions`. The source's default `/v1/chat/completion` is a custom proxy/mock route, not the standard Ollama route. The connection-test button currently requests `deepseek-r1:70b`; adjust it if the server hosts a different model.
 
 The desktop model list stores names for API requests; it does not download or deploy model weights. A default model name does not establish that a particular GPU can host it. Document requests currently specify a 16,384-token context, and chat requests specify 65,536 tokens; review these settings against available GPU memory before use.
-
-## Implementation boundaries
-
-- PDF parsing reads existing text; OCR is not implemented in the document-analysis path.
-- DOCX text analysis reads paragraphs, rather than reconstructing full document layout or tables.
-- Output cleanup and JSON repair use heuristic rules. Validation of JSON structure does not establish the correctness of extracted engineering data.
-- Chunk merging performs structural concatenation and identifier regeneration, without semantic deduplication.
-- PowerPoint generation uses Word structure and slide-template placeholders; it does not use a language model to summarize slide content.
-
-Local document samples, generated outputs, recordings, archives and private configuration files are excluded from version control. No GPU inference or end-to-end desktop execution result is claimed by this source publication.
