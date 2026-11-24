@@ -1,0 +1,30 @@
+# Local document samples, generated requirements, recordings and archives
+/xml_test/
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local credentials and connection settings
+.env
+.env.*
+!.env.example
+config.ini
+*.pem
+*.key
+
+# Build outputs and local editor files
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+*.log
+Thumbs.db
+.DS_Store
