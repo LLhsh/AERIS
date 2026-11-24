@@ -1,7 +1,5 @@
 # AERIS
 
-**Aerospace Engine Requirements Intelligence System**
-
 A Python desktop application for aerospace engine document parsing, technical parameter extraction, and hierarchical requirements organization using a locally hosted language model.
 
 ## Features
